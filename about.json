@@ -1,0 +1,20 @@
+{
+  "name": "Stratzy",
+  "about_url": "https://stratzy.in",
+  "license_url": "",
+  "component": false,
+  "color_schemes": {
+    "Stratzy Light": {
+      "primary": "1A1613",
+      "secondary": "FBFAF6",
+      "tertiary": "018A4D",
+      "quaternary": "01AD60",
+      "header_background": "FBFAF6",
+      "header_primary": "1A1613",
+      "highlight": "EFE9DC",
+      "danger": "B03A2E",
+      "success": "01AD60",
+      "love": "B03A2E"
+    }
+  }
+}

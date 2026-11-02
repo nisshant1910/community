@@ -1,0 +1,113 @@
+// Stratzy theme for Discourse — light only, brand system v1
+// Greens: #01C36D #01AD60 #018A4D #00674E | Cream #EFE9DC | Ink #1A1613 | Red #B03A2E (risk only)
+
+:root {
+  --font-family: "DM Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --heading-font-family: "DM Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --stratzy-mono: "DM Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --stratzy-serif: "Libre Baskerville", Georgia, serif;
+  --stratzy-green-dark: #00674E;
+  --stratzy-cream: #EFE9DC;
+  --d-border-radius: 4px;
+  --d-border-radius-large: 6px;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+// One accent phrase per page, used sparingly (e.g. homepage hero)
+.stratzy-accent {
+  font-family: var(--stratzy-serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+// Header: flat, one hairline
+.d-header {
+  box-shadow: none;
+  border-bottom: 1px solid var(--primary-low);
+}
+
+// Links and buttons
+.cooked a,
+.topic-list .main-link a.title:hover {
+  color: var(--stratzy-green-dark);
+}
+
+.btn {
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--tertiary);
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    background: var(--stratzy-green-dark);
+    color: #fff;
+  }
+}
+
+// Topic list: readable titles, quiet rows
+.topic-list {
+  .main-link a.title {
+    font-weight: 600;
+  }
+
+  .topic-list-item:hover {
+    background: rgba(239, 233, 220, 0.45);
+  }
+
+  .num,
+  .age,
+  .posters {
+    font-family: var(--stratzy-mono);
+    font-size: var(--font-down-1);
+  }
+}
+
+// Categories: sharp badges
+.badge-category__wrapper,
+.badge-wrapper.bullet .badge-category {
+  border-radius: 3px;
+}
+
+// Posts
+.topic-body .cooked blockquote,
+.cooked blockquote {
+  border-left: 3px solid var(--quaternary);
+  background: var(--stratzy-cream);
+  border-radius: 0 4px 4px 0;
+}
+
+// Risk or warning states use brand red only
+.alert-error,
+.btn-danger {
+  background: #B03A2E;
+  color: #fff;
+}
+
+// Keyboard focus
+:focus-visible {
+  outline: 2px solid var(--quaternary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
